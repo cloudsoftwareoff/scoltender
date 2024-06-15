@@ -1,16 +1,12 @@
 # scoltender
+# Project Deprecated and Canceled
 
-A new Flutter project.
+**Note: This project is no longer maintained and has been canceled.**
 
-## Getting Started
+Unfortunately, this project has been deprecated and development has been halted. We apologize for any inconvenience this may cause. Please feel free to explore the existing codebase if it's helpful for reference, but be aware that it is no longer actively supported.
 
-This project is a starting point for a Flutter application.
+If you have any questions or concerns related to this project, you can reach out to [contact email or alternative contact information].
 
-A few resources to get you started if this is your first Flutter project:
+Thank you for your understanding.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
