@@ -24,7 +24,7 @@ class BidScreen extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                _placeBid();
+                _placeBid(context);
               },
               child: Text('Submit Bid'),
             ),
@@ -34,7 +34,7 @@ class BidScreen extends StatelessWidget {
     );
   }
 
-  void _placeBid() async {
+  void _placeBid(BuildContext context) async {
     User? user = FirebaseAuth.instance.currentUser;
     if (user != null) {
       await FirebaseFirestore.instance.collection('bids').add({
@@ -42,7 +42,9 @@ class BidScreen extends StatelessWidget {
         'contractorId': user.uid,
         'amount': double.parse(bidAmountController.text),
       });
-      // Show success message or navigate to another screen
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text("Bid placed")));
+      Navigator.of(context).pop();
     }
   }
 }

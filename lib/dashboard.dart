@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scoltender/create_opportunity.dart';
 import 'package:scoltender/op_list.dart';
+import 'package:scoltender/services/auth_service.dart';
 
 class DashboardScreen extends StatelessWidget {
   final String userRole;
@@ -15,6 +16,15 @@ class DashboardScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            ElevatedButton(
+              onPressed: () {
+                UserAuth().signOut(context);
+              },
+              child: const Text('Log out'),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             if (userRole == 'establishment')
               ElevatedButton(
                 onPressed: () {

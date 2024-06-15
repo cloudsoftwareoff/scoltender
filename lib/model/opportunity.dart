@@ -2,6 +2,7 @@ class Opportunity {
   final String id;
   final String title;
   final String description;
+  List<String> material;
   final DateTime endDate;
   final String createdBy;
   final DateTime createdAt;
@@ -13,6 +14,7 @@ class Opportunity {
     required this.id,
     required this.title,
     required this.description,
+    required this.material,
     required this.endDate,
     required this.createdBy,
     required this.createdAt,
@@ -20,12 +22,13 @@ class Opportunity {
     this.status = 'open',
   });
 
-  // Method to convert Opportunity object to a map
+
   Map<String, dynamic> toMap() {
     return {
       'id': id,
       'title': title,
       'description': description,
+      'material':material,
       'endDate': endDate.toIso8601String(),
       'createdBy': createdBy,
       'createdAt': createdAt.toIso8601String(),
@@ -40,6 +43,7 @@ class Opportunity {
       id: map['id'],
       title: map['title'],
       description: map['description'],
+        material: List<String>.from(map['material'] ?? []),
       endDate: DateTime.parse(map['endDate']),
       createdBy: map['createdBy'],
       createdAt: DateTime.parse(map['createdAt']),
